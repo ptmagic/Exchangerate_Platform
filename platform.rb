@@ -10,4 +10,10 @@ class Platform < Sinatra::Base
   get "/" do
     open(url){ |f| return f.read}
   end
+
+  get "/hello/:change" do
+    changeurl = url.dup
+    q = changeurl.sub("USDCNY",params[:change])
+    open(q){ |f| return f.read}
+  end
 end
