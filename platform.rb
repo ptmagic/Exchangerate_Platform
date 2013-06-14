@@ -16,4 +16,13 @@ class Platform < Sinatra::Base
     q = changeurl.sub("USDCNY",params[:change])
     open(q){ |f| return f.read}
   end
+
+  get "/world/" do
+    signature = params[:signature]
+    timestamp = params[:timestamp]
+    nonce = params[:nonce]
+    echostr = params[:echostr]
+    echostr
+  end
+
 end
