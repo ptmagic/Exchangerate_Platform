@@ -1,2 +1,2 @@
-require './platform.rb'
-run Platform.new
+require './app.rb'
+run app.new
